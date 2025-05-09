@@ -13,7 +13,6 @@ public class Alegria_Nathan_MenuOpciones {
     public static void main(String[] args) {
         Scanner lea=new Scanner(System.in);
         System.out.println("Menu");
-        int contadoropciones=0;
         int[] contadoropciones=new int[4];
         int opcion;
         Random random=new Random();
@@ -27,18 +26,17 @@ public class Alegria_Nathan_MenuOpciones {
             System.out.println("5.Salir");
             System.out.println("Seleccione una opción:");
             opcion=lea.nextInt();
-            switch(opcion){
-                case 1:
-                    //Palabra Alreves
-                    contadoropciones++;
-                    System.out.println("Cuantas palabras ingresara");
-                    int num=lea.nextInt();
-                    String palabramaslarga="";
-                    boolean espalindromo=false;
-                    for(int i=1;i<=num;i++){
-                        System.out.println("Palabra"+i+":");
-                        String palabra=lea.next();
-                        String invertida="";
+            if(opcion==1){
+             //Palabra Alreves
+             contadoropciones[0]++;
+             System.out.println("Cuantas palabras ingresara");
+             int num=lea.nextInt();
+             String palabramaslarga="";
+              boolean espalindromo=false;
+             for(int i=1;i<=num;i++){
+                    System.out.println("Palabra"+i+":");
+                    String palabra=lea.next();
+                    String invertida="";
                         for(int j=palabra.length()-1;j>=0;j--){
                             invertida+=palabra.charAt(j);
                         }
@@ -50,9 +48,6 @@ public class Alegria_Nathan_MenuOpciones {
                         }
                         System.out.println("Palabra más Larga:"+palabramaslarga);
                         System.out.print("Hay alguna palindroma:"+(espalindromo?"Sí":"No"));
-                 break;
-               case 2:
-                    contadoropciones++;
                     } 
             }
             if(opcion==2){
@@ -64,7 +59,6 @@ public class Alegria_Nathan_MenuOpciones {
                     int suma=0;
                     for(int i=1;i<numero;i++){
                         if(numero%i==0){
-                        suma+=1;
                         suma+=i;
                         }
                     }
@@ -73,17 +67,7 @@ public class Alegria_Nathan_MenuOpciones {
                     }else{
                     System.out.println(numero+"No es un numero perfecto");
                     }
-                    }
-                    break;
-                case 3:
-                    
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
             }
-        }while(opcion!=5);
             if(opcion==3){
 
                     //Generar numero y determinar si es primo o no
@@ -168,3 +152,4 @@ public class Alegria_Nathan_MenuOpciones {
 }while(opcion!=5);
 }
 }
+
