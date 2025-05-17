@@ -16,6 +16,7 @@ public class Alegria_Nathan_MenuOpciones {
         int[] contadoropciones=new int[4];
         int opcion;
         Random random=new Random();
+        
         do{
             //Menu
             System.out.println("****Menú de Opciones****");
@@ -84,7 +85,7 @@ public class Alegria_Nathan_MenuOpciones {
                         System.out.println("El numero es Primo:"+(primo?"Sí":"No"));
             }
             }
-               if(opcion==4){
+                if(opcion==4){
                    //Votaciones
                     contadoropciones[3]++;
                     System.out.println("Cuantos votantes hay en el país:");
