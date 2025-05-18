@@ -11,6 +11,7 @@ import java.util.Scanner;
 public class Alegria_Nathan_ProyectoTienda {
   
     public static void main(String[] args) {
+        //Variables
         Scanner lea = new Scanner(System.in);
         double caja = 0;
         int opcion;
@@ -29,15 +30,16 @@ public class Alegria_Nathan_ProyectoTienda {
         double invMaiz = 0;
         int intentos = 0;
         boolean cajaAbierta = true;
-
+        //Solicitud al usuario la cantidad inicial en caja
         do {
-            System.out.print("Ingresar cantidad de efectivo que ingresará a la caja: ");
+            System.out.print("Ingresar cantidad de efectivo que ingresará a la caja(En numeros): ");
             caja += lea.nextDouble();
             if (caja < 0) {
                 System.out.println("Error numero negativo");
                 caja = 0;
             }
         } while (caja == 0);
+        
         do {
             // Menú de opciones
             System.out.println("\n**** Menu de Opciones ****");
@@ -48,7 +50,7 @@ public class Alegria_Nathan_ProyectoTienda {
             System.out.println("5.Cierre de Caja");
             System.out.println("6.Salir del Sistema");
             System.out.println("*************************");
-            System.out.println("Seleccione una opcion:");
+            System.out.print("Seleccione una opcion:");
             opcion = lea.nextInt();
 
             switch (opcion) {
@@ -400,7 +402,7 @@ public class Alegria_Nathan_ProyectoTienda {
                         System.out.println("Proveedor no vende este producto");
                     }
                 case 4:
-                    //Reportes
+                    //Generar Reportes
                     if (totalcompras != 0 && totalventas != 0) {
                         System.out.println("Total en Caja: Lps." + caja);
                         System.out.println("Cantidad de Ventas en este día:" + ventas);
@@ -417,6 +419,7 @@ public class Alegria_Nathan_ProyectoTienda {
                     }
                     break;
                 case 5:
+                    //Cierre de caja
                     if (!cajaAbierta) {
                         System.out.println("Error: La caja está cerrada. Debe abrir la caja.");
                         break;
@@ -427,10 +430,13 @@ public class Alegria_Nathan_ProyectoTienda {
                     double depmax = caja * 0.60;
                     if (deposito < depmax) {
                         caja -= deposito;
+                        cajaAbierta = false;
+                        System.out.println("Caja cerrada exitosamente. No se permiten ventas ni compras hasta abrir nuevamente la caja.");
                     } else {
                         System.out.println("Error ingresar una cifra que no exceda del 60%");
                         System.out.println("El 60% es de: Lps." + depmax);
                     }
+                    //Reinicio de variables para el siguiente día
                     ventas = 0;
                     compras = 0;
                     totalcompras = 0;
@@ -445,10 +451,10 @@ public class Alegria_Nathan_ProyectoTienda {
                     invTrigo = 0;
                     invMaiz = 0;
                     intentos = 0;
-                    cajaAbierta = false;
-                    System.out.println("Caja cerrada exitosamente. No se permiten ventas ni compras hasta abrir nuevamente la caja.");
+                    
                     break;
                 case 6:
+                    //Salir del Sistema
                     System.out.print("Saliendo del Sistema" + "\n");
 
                 default:
