@@ -52,13 +52,13 @@ public class Alegria_Nathan_Examen1 {
                     boolean descifrado=false;
 
                     System.out.print("Ingresar mensaje a cifrar:");
-                    mensaje = lea.next().toLowerCase();
+                    mensaje = lea.next();
 
                     for (int i = 0; i < mensaje.length(); i++) {
                         char letra = mensaje.charAt(i);
                         if (letra >= 'a' && letra <= 'z') {
                             resultado += (char) ('z' - (letra - 'a'));
-                        } else if (letra >= 'A' && letra <= -'Z') {
+                        } else if (letra >= 'A' && letra <= 'Z') {
                             resultado += (char) ('Z' - (letra - 'A'));
                         } else {
                             resultado += letra;
@@ -80,7 +80,7 @@ public class Alegria_Nathan_Examen1 {
                             char letra = resultado.charAt(i);
                             if (letra >= 'a' && letra <= 'z') {
                                 descifrarresultado += (char) ('z' - (letra - 'a'));
-                            } else if (letra >= 'A' && letra <= -'Z') {
+                            } else if (letra >= 'A' && letra <= 'Z') {
                                 descifrarresultado += (char) ('Z' - (letra - 'A'));
                             } else {
                                 descifrarresultado += letra;
