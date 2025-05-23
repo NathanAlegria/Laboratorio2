@@ -67,7 +67,7 @@ public class Alegria_Nathan_Examen1 {
                     }
                     System.out.println("Mensaje Cifrado:" + resultado);
 
-                    System.out.println("¿Deseas descifrar este mensaje? (si/no): ");
+                    System.out.print("¿Deseas descifrar este mensaje? (si/no): ");
                     String respuesta = lea.next().toLowerCase();
                     
                     if(respuesta.equals("si")){
@@ -100,7 +100,7 @@ public class Alegria_Nathan_Examen1 {
                     while (seguir) {
                         do {
                             System.out.print("Seleccione una opcion(piedra,papel,tijera):");
-                            eleccion = lea.next();
+                            eleccion = lea.next().toLowerCase();
                         } while (!eleccion.equals("piedra") && !eleccion.equals("papel") && !eleccion.equals("tijera"));
                         int opcionsistema = random.nextInt(3);
                         String eleccionsistema = "";
@@ -161,7 +161,7 @@ public class Alegria_Nathan_Examen1 {
                         }
                     }
                     if (!correcto) {
-                        System.out.println("Intentos maximos alcanzados" + "El numero Correcto es:" + numerorandom);
+                        System.out.println("Intentos maximos alcanzados" + "\nEl numero Correcto es:" + numerorandom);
                     }
                     System.out.println("---------------");
                     break;
