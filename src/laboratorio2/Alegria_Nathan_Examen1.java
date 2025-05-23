@@ -52,7 +52,7 @@ public class Alegria_Nathan_Examen1 {
                     boolean descifrado=false;
 
                     System.out.print("Ingresar mensaje a cifrar:");
-                    mensaje = lea.next();
+                    mensaje = lea.next().toLowerCase();
 
                     for (int i = 0; i < mensaje.length(); i++) {
                         char letra = mensaje.charAt(i);
