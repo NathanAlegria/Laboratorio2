@@ -214,11 +214,13 @@ public class Alegria_Nathan_ArreglosLab5 extends javax.swing.JFrame {
 
     private void JugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JugarActionPerformed
         // TODO add your handling code here:
+        jTextField3ActionPerformed();
         
     }//GEN-LAST:event_JugarActionPerformed
 
     private void CambiarPalabraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CambiarPalabraActionPerformed
         // TODO add your handling code here:
+        jTextField1ActionPerformed();
         
     }//GEN-LAST:event_CambiarPalabraActionPerformed
 
@@ -302,4 +304,12 @@ public class Alegria_Nathan_ArreglosLab5 extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
+
+    private void jTextField3ActionPerformed() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private void jTextField1ActionPerformed() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
